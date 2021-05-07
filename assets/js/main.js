@@ -11,14 +11,14 @@ d3.csv("assets/csv/viz1ch1.csv", function(d) {
   viz1 = data;
   console.log(viz1);
 
-  d3.select(".hope").selectAll("div")
+  d3.select(".cheese").selectAll("div")
     .data(viz1)
     .enter()
     .append("div")
     .attr("class", "bar")
     .style("height", function(d) {
       console.log(d);
-      var barHeight = d.cheese;
+      var barHeight = d.cheese*10;
       return barHeight + "px";
     });
 });
