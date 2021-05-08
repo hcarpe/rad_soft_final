@@ -8,6 +8,12 @@ d3.csv("assets/csv/viz3ch1.csv", function(d) {
   for (var key in data){
     dentists.push(data[key].dentists);
   }
+
+  // set the color scale
+  var color = d3.scaleOrdinal()
+    .domain(data)
+    .range(d3.schemeSet2);
+
   var pie = d3.pie()(dentists);
 
   var width = 450;

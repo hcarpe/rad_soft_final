@@ -12,7 +12,8 @@ d3.csv("assets/csv/viz2ch1.csv", function(d) {
     .append("div")
     .attr("class", "bar")
     .style("height", function(d) {
-      var barHeight = d.deaths / 1000;
+      var barHeight = d.deaths / 4000;
       return barHeight + "px";
-    });
+    })
+    .style("margin", "2px");
 });

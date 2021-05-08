@@ -12,7 +12,8 @@ d3.csv("assets/csv/viz4.csv", function(d) {
     .append("div")
     .attr("class", "bar")
     .style("height", function(d) {
-      var barHeight = d.aprehensions / 10000;
+      var barHeight = d.aprehensions / 1500;
       return barHeight + "px";
-    });
+    })
+    .style("margin", "2px");
 });
