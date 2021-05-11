@@ -1,7 +1,8 @@
+(function(){
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 50, left: 70},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 500,
+    height = 300;
 
 // set the ranges
 var x = d3.scaleTime().range([0, width]);
@@ -15,7 +16,7 @@ var valueline = d3.line()
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".marginrror").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -39,7 +40,9 @@ d3.csv("assets/csv/viz5.csv").then(function(data) {
   svg.append("path")
       .data([data])
       .attr("class", "line")
-      .attr("d", valueline);
+      .attr("d", valueline)
+      .style("stroke","blue")
+      .style("fill","none");
 
   // Add the x Axis
   svg.append("g")
@@ -51,27 +54,4 @@ d3.csv("assets/csv/viz5.csv").then(function(data) {
       .call(d3.axisLeft(y));
 
 });
-
-
-
-
-
-
-// d3.csv("assets/csv/viz5.csv", function(d) {
-//   return {
-//     sample: +d.sample,
-//     margin: +d.margin,
-//   };
-// }).then(function(data) {
-//   viz8 = data;
-//
-//   d3.select(".marginrror").selectAll("div")
-//     .data(viz8)
-//     .enter()
-//     .append("div")
-//     .attr("class", "bar")
-//     .style("height", function(d) {
-//       var barHeight = d.margin;
-//       return barHeight + "px";
-//     });
-// });
+})();

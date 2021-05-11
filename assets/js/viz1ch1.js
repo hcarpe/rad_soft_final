@@ -1,4 +1,6 @@
 // set the dimensions and margins of the graph
+(function(){
+  //Normal code goes here
 var margin = {top: 20, right: 40, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -37,7 +39,6 @@ d3.csv("assets/csv/viz1ch1.csv").then(function(data) {
       d.citizens = +d.citizens;
       d.cheese = +d.cheese;
   });
-  console.log(data);
 
   // Scale the range of the data
   x.domain(d3.extent(data, function(d) { return d.year; }));
@@ -77,3 +78,4 @@ d3.csv("assets/csv/viz1ch1.csv").then(function(data) {
       .call(d3.axisRight(y1));
 
 });
+})();

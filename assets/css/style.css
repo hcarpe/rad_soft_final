@@ -1,21 +1,20 @@
-.bar {
-  display: inline-block;
-  width: 20px;
-  height: 75px;
-  background-color: teal;}
-
-  .svg-container {
-  	display: inline-block;
-  	position: relative;
-  	width: 100%;
-  	padding-bottom: 100%;
-  	vertical-align: middle;
-  	overflow: hidden;
+/* css */
+*{
+  font-family: "Helvetica", Times, serif;
+  line-height: normal;
+  background-color: #DCDCDC;
   }
 
-  .svg-content {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
+  .bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;
+    background-color: teal;}
+
+  .title {
+    font-size: xx-large;
+  }
+
+  .map {
+    font-size: small;
+  }

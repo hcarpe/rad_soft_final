@@ -1,3 +1,4 @@
+(function(){
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 40, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -76,3 +77,4 @@ d3.csv("assets/csv/viz1ch2.csv").then(function(data) {
       .call(d3.axisRight(y1));
 
 });
+})();
